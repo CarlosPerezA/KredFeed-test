@@ -1,0 +1,26 @@
+.wrapp {
+    display: flex;
+    flex-direction: row;
+}
+
+.FormContainer{
+    width: 862px;
+    height: 100vh;
+    background-color: white;
+}
+
+.BackgroundContainer{
+    background-image: url('../../assets/static/background.jpeg');
+    background-position: right;
+    background-size: cover;
+    width: 1058px;
+    height: 100vh;
+}
+
+.colorMask {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(250, 117, 46,0.65) 50%, rgba(87, 82, 74,0.1) 75%);
+    width: 1058px;
+    height: 100vh;
+}
