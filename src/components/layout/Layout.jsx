@@ -1,21 +1,22 @@
 import React from 'react';
 import '../../styles/layout/Layout.scss'
-import kredFeedLogo from '../../assets/static/logo-black.png';
+import kredFeedLogo from '../../assets/static/logo-white.png';
 
-const Layout = () => {
+
+const Layout = ({ children }) => {
     return (
-        <div className="wrapp">
-            <section className="FormContainer">
-
+        <div className='wrapp'>
+            <section className='FormContainer'>
+            {children}
             </section>
-            <section className="BackgroundContainer">
-                <div className="colorMask" />
-                <div className="text">
-                    <div className="text--title">
-                        <h1>For growing your bussines</h1>
+            <section className='BackgroundContainer'>
+                <div className='textContainer'>
+                    <div className='text--title'>
+                        <h1 className='title'>For growing your bussines</h1>
                     </div>
-                    <img src={kredFeedLogo} width={220} height={40} alt="KredFeed Logo" />
+                    <img src={kredFeedLogo} width={312} height={47} alt='KredFeed Logo' />
                 </div>
+                <div className='colorMask' />
             </section>
         </div>
     )

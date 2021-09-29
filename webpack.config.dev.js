@@ -36,7 +36,7 @@ module.exports = {
                 ]
                 },
                 {
-                test: /\.(png|gif|jpg)$/,
+                test: /\.(png|gif|jpg|otf)$/,
                 use:[
                     {
                     'loader': 'file-loader',
@@ -45,6 +45,14 @@ module.exports = {
                     }
                     }
                 ]    
+                },
+                {
+                test: /\.svg$/,
+                use: [
+                    {
+                    loader: 'svg-inline-loader'
+                    }
+                ]
                 }
         ]
     },

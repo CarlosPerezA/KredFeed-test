@@ -1,0 +1,75 @@
+@import '../colors.scss';
+
+.startingForm--Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.startingForm--Container__header {
+    text-align: center;
+    margin-bottom: 30px;
+    .title {
+        font-size: 30px;
+        color: $gray;
+        margin-bottom: 10px;
+    }
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    height: 69px;
+    margin: 35px 0;
+    input {
+        font-family: "Montserrat Light";
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid $orange;
+        outline: 0;
+        font-size: 20px;
+        color: $gray;
+        padding: 7px 0;
+        background: transparent;
+    }
+    input[type="password"]{
+        font-family: "Montserrat SemiBold";
+        letter-spacing: 5px;
+    }
+    label{
+        font-family: "Montserrat Light";
+        font-size: 20px;
+        color: $gray;
+    }
+
+    button{
+        border: none;
+        border-radius: 25px;
+        background-color: $orange;
+        color: white;
+        font-family: "Montserrat SemiBold";
+        text-align: center;
+        text-decoration: none;
+        font-size: 24px;
+        height: 43px;
+        &:hover{
+            background-color: $orange-hover;
+            cursor: pointer;
+        }
+    }
+}
+
+.medium {
+    width: 393px;
+}
+
+.startingForm--Container__footer{
+    height: 45px;
+    p {
+        font-size: 20px;
+        a {
+            text-decoration: none;
+            color: $orange;
+        }
+    }
+}
