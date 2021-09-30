@@ -1,10 +1,12 @@
+@import './colors.scss';
+
 * {
     margin: 0;
 }
 
 @font-face {
     font-family: "Montserrat Bold";
-    src: url("../assets/fonts/Montserrat-Bold.otf");
+    src: url("../assets/fonts/Montserrat-Bold.otf")format('opentype');
     font-display: swap;
 }
 
@@ -16,7 +18,7 @@
 
 @font-face {
     font-family: "Montserrat SemiBold";
-    src: url("../assets/fonts/Montserrat-Regular.otf");
+    src: url("../assets/fonts/Montserrat-Regular.otf")format('opentype');
     font-display: swap;
 }
 
@@ -26,5 +28,48 @@ h1 {
 
 h2, h3, h4, h5 , p {
     font-family: "Montserrat Light";
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    height: 69px;
+    margin: 15px 35px 20px 0;
+    input {
+        font-family: "Montserrat Light";
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid $orange;
+        outline: 0;
+        font-size: 20px;
+        color: $gray;
+        padding: 7px 0;
+        background: white;
+    }
+    input[type="password"]{
+        font-family: "Montserrat SemiBold";
+        letter-spacing: 5px;
+    }
+    label{
+        font-family: "Montserrat Light";
+        font-size: 20px;
+        color: $gray;
+    }
+
+    button{
+        border: none;
+        border-radius: 25px;
+        background-color: $orange;
+        color: white;
+        font-family: "Montserrat SemiBold";
+        text-align: center;
+        text-decoration: none;
+        font-size: 24px;
+        height: 43px;
+        &:hover{
+            background-color: $orange-hover;
+            cursor: pointer;
+        }
+    }
 }
 

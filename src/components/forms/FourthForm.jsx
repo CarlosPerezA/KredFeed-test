@@ -4,7 +4,9 @@ import { withRouter } from "react-router-dom";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../../utils/updateAction";
 import Layout from '../layout/Layout';
-
+import HeaderForms from '../headerForms/HeaderForms';
+import ProgressIndicator from '../progressIndicator/progressIndicator';
+import '../../styles/forms/FirstForm.scss';
 
 const FourthForm = (props) => {
     const { register, handleSubmit,  getValues, formState: { errors } } = useForm();
@@ -15,15 +17,26 @@ const FourthForm = (props) => {
     };
     return (
         <Layout >
-        <div className="">
+        <div className="Form--container">
+            <HeaderForms />
+            <ProgressIndicator step1={true} step2={true} step3={true} step4={true} />
             <form onSubmit={handleSubmit(onSubmit)}>
-                <label htmlFor='email'>Correo electronico</label>
-                <input id='email' type='email' {...register("email", { required: 'Es necesario introducir un correo electrónico'})} defaultValue={state.data.email}/>
-                <label htmlFor='password'>Contraseña</label>
-                <input id='password' type='password' {...register("password",{ validate: (value) => value.length >= 8 })} defaultValue={state.data.password}/>
-                {errors.password && <p>Tu contraseña debe ser de al menos 8 caracteres</p>}
-                <label htmlFor='passwordRequired'>Confirma tu contraseña</label>
-                <button type="submit" >Registro</button>
+                <div className='row-1'>
+                    <div className='inputContainer XXL'>
+                        <label htmlFor='clabe'>CLABE</label>
+                        <input id='clabe' type='text' {...register("clabe")} defaultValue={state.data.clabe} />
+                    </div>
+                    <div className='inputContainer M'>
+                        <label htmlFor='banco'>Entidad financiera o Banco</label>
+                        <input id='banco' type='text' {...register("banco")} defaultValue={state.data.banco} />
+                    </div>
+                </div>
+                <div className='row-2'>
+
+                </div>
+                <div className='buttonContainer'>
+                    <button type="submit" >Finalizar</button>
+                </div>
             </form>
         </div>
     </Layout>

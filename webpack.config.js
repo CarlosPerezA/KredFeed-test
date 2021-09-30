@@ -11,6 +11,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
         publicPath: "/",
+        clean: true
     },
     resolve:{
         extensions: ['.js', '.jsx'],
@@ -44,7 +45,7 @@ module.exports = {
                 ]
                 },
                 {
-                test: /\.(png|gif|jpg)$/,
+                test: /\.(png|gif|jpg|otf)$/,
                 use:[
                     {
                     'loader': 'file-loader',

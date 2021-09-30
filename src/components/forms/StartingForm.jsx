@@ -47,8 +47,8 @@ const StartingForm = (props) => {
                         />
                         {errors.passwordConfirmation && <p>{errors.passwordConfirmation.message}</p>}
                     </div>
-                    <div className='inputContainer'>
-                        <button type='submit' >Registrate</button>
+                    <div className='buttonContainer'>
+                        <button className='button' type='submit' >Registrate</button>
                     </div>
                 </form>
                 <div className='startingForm--Container__footer'>

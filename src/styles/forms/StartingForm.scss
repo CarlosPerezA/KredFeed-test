@@ -4,6 +4,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 862px;
+    height: 100%;
+    form {
+        width: 393px;
+    }
 }
 
 .startingForm--Container__header {
@@ -16,54 +22,19 @@
     }
 }
 
-.inputContainer {
-    display: flex;
-    flex-direction: column;
-    height: 69px;
-    margin: 35px 0;
-    input {
-        font-family: "Montserrat Light";
-        width: 100%;
-        border: 0;
-        border-bottom: 2px solid $orange;
-        outline: 0;
-        font-size: 20px;
-        color: $gray;
-        padding: 7px 0;
-        background: transparent;
-    }
-    input[type="password"]{
-        font-family: "Montserrat SemiBold";
-        letter-spacing: 5px;
-    }
-    label{
-        font-family: "Montserrat Light";
-        font-size: 20px;
-        color: $gray;
-    }
-
-    button{
-        border: none;
-        border-radius: 25px;
-        background-color: $orange;
-        color: white;
-        font-family: "Montserrat SemiBold";
-        text-align: center;
-        text-decoration: none;
-        font-size: 24px;
-        height: 43px;
-        &:hover{
-            background-color: $orange-hover;
-            cursor: pointer;
-        }
-    }
-}
-
 .medium {
     width: 393px;
 }
 
+.buttonContainer{
+    width: 100%;
+    .button {
+        width: 393px;
+    }
+}
+
 .startingForm--Container__footer{
+    margin-top: 20px;
     height: 45px;
     p {
         font-size: 20px;

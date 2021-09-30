@@ -1,0 +1,56 @@
+@import '../colors.scss';
+
+.Form--container {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+}
+
+.buttonContainer{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    button{
+        border: none;
+        border-radius: 25px;
+        background-color: $orange;
+        color: white;
+        font-family: "Montserrat SemiBold";
+        text-align: center;
+        text-decoration: none;
+        font-size: 24px;
+        height: 43px;
+        width: 473px;
+        &:hover{
+            background-color: $orange-hover;
+            cursor: pointer;
+        }
+    }
+}
+
+.row-1, .row-2, .row-3, .row-4 {
+    display: flex;
+    flex-direction: row;
+}
+
+.SM {
+    width: 211px;
+    margin-right: 10px;
+}
+
+.M{
+    width: 320px;
+    margin: 0;
+}
+
+.XL {
+    width: 420px;
+}
+
+.XXL {
+    width: 560px;
+}
