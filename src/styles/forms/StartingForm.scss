@@ -8,7 +8,16 @@
     width: 862px;
     height: 100%;
     form {
-        width: 393px;
+        width: 420px;
+    }
+    @media only screen and (max-width: 1024px) and (max-width: 1500px) {
+        width: 768px;
+    }
+    @media only screen and (max-width: 1023px)  {
+        width: 375px;
+        form {
+            width: 375px;
+        }
     }
 }
 
@@ -24,12 +33,18 @@
 
 .medium {
     width: 393px;
+    @media only screen and (max-width: 1023px)  {
+        width: 350px    ;
+    }
 }
 
 .buttonContainer{
     width: 100%;
     .button {
         width: 393px;
+        @media only screen and (max-width: 1023px)  {
+            width: 350px;
+        }
     }
 }
 
@@ -38,6 +53,7 @@
     height: 45px;
     p {
         font-size: 20px;
+        color: $gray;
         a {
             text-decoration: none;
             color: $orange;

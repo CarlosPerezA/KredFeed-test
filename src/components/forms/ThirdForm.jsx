@@ -77,6 +77,11 @@ const ThirdForm = (props) => {
                         <input id='correo_electronico_representante' type='email' {...register("correo_electronico_representante")} defaultValue={state.data.correo_electronico_representante} />
                     </div>
                 </div>
+                <div className='row-5'>
+                    <div className='file-upload-2'>
+                        <input className='custom-file-input-2' value='' id='documento_identificacion' type='file' {...register("documento_identificacion")} defaultValue={state.data.documento_identificacion} />
+                    </div>
+                </div>
                 <div className='buttonContainer'>
                     <button type="submit" >Siguiente</button>
                 </div>

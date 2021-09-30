@@ -63,6 +63,11 @@ const SecondForm = (props) => {
                         <input id='telefono' type='text' {...register("telefono")} defaultValue={state.data.telefono} />
                     </div>
                 </div>
+                <div className='row-4'>
+                    <div className='file-upload'>
+                        <input className='custom-file-input' value='' id='comprobante_domicilio' type='file' {...register("comprobante_domicilio")} defaultValue={state.data.comprobante_domicilio} />
+                    </div>
+                </div>
                 <div className='buttonContainer'>
                     <button type="submit" >Siguiente</button>
                 </div>

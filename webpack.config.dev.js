@@ -37,7 +37,7 @@ module.exports = {
                 ]
                 },
                 {
-                test: /\.(png|gif|jpg|otf)$/,
+                test: /\.(png|gif|jpg)$/,
                 use:[
                     {
                     'loader': 'file-loader',
@@ -54,7 +54,11 @@ module.exports = {
                     loader: 'svg-inline-loader'
                     }
                 ]
-                }
+                },
+                {
+                    test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                    type: 'asset/resource',
+                },
         ]
     },
     plugins:[

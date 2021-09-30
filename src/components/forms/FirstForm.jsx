@@ -33,7 +33,7 @@ const FirstForm = (props) => {
                     </div>
                 </div>
                 <div className='row-2'>
-                    <div className='inputContainer XL'>
+                    <div className='inputContainer M'>
                         <label htmlFor='rfc'>RFC</label>
                         <input id='rfc' type='text' {...register("rfc")} defaultValue={state.data.rfc} />
                     </div>
@@ -41,7 +41,7 @@ const FirstForm = (props) => {
                         <label htmlFor='nacionalidad'>Nacionalidad</label>
                         <input id='nacionalidad' type='text' {...register("nacionalidad")} defaultValue={state.data.nacionalidad} />
                     </div>
-                    <div className='inputContainer SM'>
+                    <div className='inputContainer M'>
                         <label htmlFor='fecha_constitucion'>Fecha de constitución</label>
                         <input id='fecha_constitucion' type='date' {...register("fecha_constitucion")} defaultValue={state.data.fecha_constitucion} />
                     </div>

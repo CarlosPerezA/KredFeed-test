@@ -34,7 +34,7 @@ h2, h3, h4, h5 , p {
     display: flex;
     flex-direction: column;
     height: 69px;
-    margin: 15px 35px 20px 0;
+    margin: 15px 17px 20px 17px;
     input {
         font-family: "Montserrat Light";
         width: 100%;
@@ -70,6 +70,9 @@ h2, h3, h4, h5 , p {
             background-color: $orange-hover;
             cursor: pointer;
         }
+    }
+    @media only screen and (max-width: 1023px)  {
+        margin: none;
     }
 }
 

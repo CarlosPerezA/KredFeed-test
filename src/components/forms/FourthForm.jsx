@@ -32,7 +32,17 @@ const FourthForm = (props) => {
                     </div>
                 </div>
                 <div className='row-2'>
-
+                    <div className='checkbox'>
+                        <input
+                            type="radio"
+                            value="Yes"
+                            {...register("acepto_condiciones", { required: true })}
+                            />
+                        <label>Acepto los terminos y condiciones</label>
+                    </div>
+                </div>
+                <div className='error--container'>
+                {errors.acepto_condiciones &&  <p>Es necesario aceptar los terminos y condiciones</p> }
                 </div>
                 <div className='buttonContainer'>
                     <button type="submit" >Finalizar</button>

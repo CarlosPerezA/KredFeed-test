@@ -5,7 +5,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1000px;
+    width: 990px;
+    @media only screen and (max-width: 1023px)  {
+        width: 360px;
+    }
 }
 
 .buttonContainer{
@@ -25,6 +28,10 @@
         font-size: 24px;
         height: 43px;
         width: 473px;
+        @media only screen and (max-width: 1023px)  {
+            width: 360px;
+            margin-bottom: 40px;
+        }
         &:hover{
             background-color: $orange-hover;
             cursor: pointer;
@@ -32,25 +39,151 @@
     }
 }
 
-.row-1, .row-2, .row-3, .row-4 {
+.row-1, .row-2, .row-3, .row-4, .row-5 {
     display: flex;
     flex-direction: row;
+    @media only screen and (max-width: 1023px)  {
+        flex-direction: column;
+    }
 }
 
 .SM {
     width: 211px;
     margin-right: 10px;
+    @media only screen and (max-width: 1023px)  {
+        width: 350px;
+    }   
 }
 
 .M{
     width: 320px;
     margin: 0;
+    @media only screen and (max-width: 1023px)  {
+        width: 350px;
+    }
 }
 
 .XL {
     width: 420px;
+    @media only screen and (max-width: 1023px)  {
+        width: 350px;
+    }
 }
 
 .XXL {
     width: 560px;
+    @media only screen and (max-width: 1023px)  {
+        width: 350px;
+    }
+}
+
+.file-upload {
+    @media only screen and (max-width: 1023px)  {
+        width: 350px;
+        padding-left: 60px;
+    }
+    margin-top: 15px;
+    padding-left: 20px;
+    width: 400px;
+    .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+      }
+      .custom-file-input::before {
+        width: 220px;
+        height: 30px;
+        content: 'Comprobante de domicilio';
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $orange;
+        border-radius: 30px;
+        padding: 6px 8px;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        color: $gray;
+      }
+      .custom-file-input:hover::before {
+        border-color: $orange-hover;
+      }
+      .custom-file-input:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+      }
+}
+
+.file-upload-2 {
+    @media only screen and (max-width: 1023px)  {
+        width: 350px;
+        padding-left: 60px;
+    }
+    margin-top: 15px;
+    padding-left: 20px;
+    width: 400px;
+    .custom-file-input-2::-webkit-file-upload-button {
+        visibility: hidden;
+      }
+      .custom-file-input-2::before {
+        width: 220px;
+        height: 30px;
+        content: 'Documento de identificación';
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $orange;
+        border-radius: 30px;
+        padding: 6px 8px;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        color: $gray;
+      }
+      .custom-file-input-2:hover::before {
+        border-color: $orange-hover;
+      }
+      .custom-file-input-2:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+      }
+}
+
+
+.checkbox{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    input[type="radio"] {
+        width: 20px;
+        height: 20px;
+        border: 1px solid $orange;
+    }
+    label {
+        font-family: "Montserrat Light";
+        margin-left: 10px;
+        font-size: 20px;
+        color: $gray;
+    }
+}
+
+.error--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    p {
+        font-size: 16px;
+        color: $orange;
+    }
 }
