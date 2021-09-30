@@ -1,10 +1,14 @@
 @import '../colors.scss';
 
-.Form--container {
-    flex-grow: 2;
+@mixin flex-box {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.Form--container {
+    flex-grow: 2;
+    @include flex-box();
     width: 990px;
     @media only screen and (max-width: 1023px)  {
         width: 360px;
@@ -14,9 +18,7 @@
 .buttonContainer{
     margin-top: 50px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex-box();
     button{
         border: none;
         border-radius: 25px;
@@ -80,7 +82,6 @@
 .file-upload {
     @media only screen and (max-width: 1023px)  {
         width: 350px;
-        padding-left: 60px;
     }
     margin-top: 15px;
     padding-left: 20px;
@@ -92,15 +93,14 @@
         width: 220px;
         height: 30px;
         content: 'Comprobante de domicilio';
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include flex-box();
         justify-content: center;
         border: 2px solid $orange;
         border-radius: 30px;
         padding: 6px 8px;
         outline: none;
         white-space: nowrap;
+        -webkit-user-select: none;
         cursor: pointer;
         text-shadow: 1px 1px #fff;
         font-weight: 700;
@@ -119,7 +119,6 @@
 .file-upload-2 {
     @media only screen and (max-width: 1023px)  {
         width: 350px;
-        padding-left: 60px;
     }
     margin-top: 15px;
     padding-left: 20px;
@@ -131,15 +130,14 @@
         width: 220px;
         height: 30px;
         content: 'Documento de identificación';
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include flex-box();
         justify-content: center;
         border: 2px solid $orange;
         border-radius: 30px;
         padding: 6px 8px;
         outline: none;
         white-space: nowrap;
+        -webkit-user-select: none;
         cursor: pointer;
         text-shadow: 1px 1px #fff;
         font-weight: 700;

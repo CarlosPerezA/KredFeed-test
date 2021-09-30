@@ -36,15 +36,15 @@ const ThirdForm = (props) => {
                     </div>
                 </div>
                 <div className='row-2'>
-                    <div className='inputContainer XL'>
-                        <label htmlFor='entidad_federativa_nacimiento'>Entidad federativa de nacimiento</label>
+                    <div className='inputContainer M'>
+                        <label htmlFor='entidad_federativa_nacimiento'>Lugar de nacimiento</label>
                         <input id='entidad_federativa_nacimiento' type='text' {...register("entidad_federativa_nacimiento")} defaultValue={state.data.entidad_federativa_nacimiento} />
                     </div>
                     <div className='inputContainer SM'>
                         <label htmlFor='pais_nacimiento'>País de nacimiento</label>
                         <input id='pais_nacimiento' type='text' {...register("pais_nacimiento")} defaultValue={state.data.pais_nacimiento} />
                     </div>
-                    <div className='inputContainer SM'>
+                    <div className='inputContainer M'>
                         <label htmlFor='nacionalidad'>Nacionalidad</label>
                         <input id='nacionalidad' type='text' {...register("nacionalidad")} defaultValue={state.data.nacionalidad} />
                     </div>

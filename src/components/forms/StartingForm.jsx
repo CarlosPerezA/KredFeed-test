@@ -29,7 +29,7 @@ const StartingForm = (props) => {
                     <div className='inputContainer medium'>
                         <label htmlFor='password'>Contraseña</label>
                         <input id='password' type='password' {...register('password',{ validate: (value) => value.length >= 8 })} defaultValue={state.data.password}/>
-                        {errors.password && <p>Tu contraseña debe ser de al menos 8 caracteres</p>}
+                        {errors.password && <p>Tu contraseña debe contener minimo 8 caracteres</p>}
                     </div>
                     <div className='inputContainer medium'>
                         <label htmlFor='passwordRequired'>Confirma tu contraseña</label>

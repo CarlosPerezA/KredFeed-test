@@ -1,11 +1,20 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 import '../../styles/progressIndicator/ProgressIndicator.scss';
+import arrowGray from '../../assets/static/arrrow-gray.png';
 
 const progressIndicator = ({ step1, step2, step3, step4 }) => {
+    const history = useHistory();
     return (
         <div className='progress--container'>
-            <div className='progress--container__text'>
-                <h2 className='title'>Registro</h2>
+            <div className={step2 ? 'progress--container__text_next' :'progress--container__text'}>
+                <div className='text back'>
+                    <img src={arrowGray} width={10} height={15} alt="Flecha para regresar de pagina" />
+                    <button onClick={() => { history.goBack(); }}>Regresar</button>
+                </div>
+                <div className='text'>
+                    <h2 className='title'>Registro</h2>
+                </div>
             </div>
             <div className='progress--container__elements'>
             <div className={ step1 ? 'circle orange' : 'circle'}>

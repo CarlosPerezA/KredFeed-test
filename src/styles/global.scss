@@ -35,6 +35,13 @@ h2, h3, h4, h5 , p {
     flex-direction: column;
     height: 69px;
     margin: 15px 17px 20px 17px;
+    p {
+        color: $orange;
+        padding-top: 5px;
+        @media only screen and (max-width: 1023px)  {
+           font-size: 12px;
+        }
+    }
     input {
         font-family: "Montserrat Light";
         width: 100%;
